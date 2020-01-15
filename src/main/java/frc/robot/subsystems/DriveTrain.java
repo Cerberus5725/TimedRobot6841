@@ -11,8 +11,8 @@ private Spark rightMotorFront;
 private Spark leftMotorBack;
 private Spark rightMotorBack;
 
-public Boolean flip = false;
-public Double speed = 0.85;
+public Boolean inverted = false;
+private Double dSpeed = 0.85;
 
 public DriveTrain() {
 
@@ -39,7 +39,7 @@ rightMotorBack.setInverted(false);
     }
 
 
-    public void driveWithJoysticks(double joystickX, double joystickY, double dSpeed, boolean inverted)
+    public void driveWithJoysticks(double joystickX, double joystickY)
 	{
         double motorLeft;
         double motorRight;
@@ -57,8 +57,10 @@ rightMotorBack.setInverted(false);
         }
         leftMotorFront.set(motorLeft);
         rightMotorFront.set(motorRight);
-        leftMotorBack.set(motorLeft);
-        rightMotorBack.set(motorRight);
+        //leftMotorBack.set(motorLeft);
+        //rightMotorBack.set(motorRight);
+        System.out.println("Motor Left: " + motorLeft);
+        System.out.println("Motor Right: " + motorRight);
         }
         else
         {

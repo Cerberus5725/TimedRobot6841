@@ -12,6 +12,7 @@ public class OI {
 public JoystickButton inverseDriveTrain;
 public JoystickButton revertDriveTrain;
 public JoystickButton ballIntake;
+public JoystickButton unloadBall;
 
 public Joystick xBox;
 
@@ -24,6 +25,8 @@ public Joystick xBox;
     inverseDriveTrain.whenPressed(new InverseDriveTrainCode());
     ballIntake = new JoystickButton(xBox, 1);
     ballIntake.whileHeld(new IntakeBall());
+    unloadBall = new JoystickButton(xBox, 4);
+    unloadBall.whileHeld(new UnloadBall());
         // SmartDashboard Buttons
         SmartDashboard.putData("AutonomousCode", new AutonomousCode());
         SmartDashboard.putData("DriveTrainCode", new DriveTrainCode());

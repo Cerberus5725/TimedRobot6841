@@ -9,7 +9,6 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.commands.IntakeBall;
 
 /**
  * Add your docs here.
@@ -30,12 +29,17 @@ public class Intake extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new IntakeBall());
+    //setDefaultCommand(new IntakeBall());
   }
 
-  public void takeBallIn(double speed)
+  public void takeBallIn()
   {
-   intakeRoller.set(speed);
+   intakeRoller.set(intakeSpeed);
+  }
+
+  public void unLoadBall()
+  {
+   intakeRoller.set(-intakeSpeed);
   }
 
   public void stop()

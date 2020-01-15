@@ -11,7 +11,7 @@ public class InverseDriveTrainCode extends Command {
 
     @Override
     protected void initialize() {
-        Robot.driveTrain.flip = true;
+        Robot.driveTrain.inverted = true;
     }
 
     @Override

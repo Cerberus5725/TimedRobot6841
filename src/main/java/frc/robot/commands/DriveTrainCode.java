@@ -15,7 +15,7 @@ public class DriveTrainCode extends Command {
 
     @Override
     protected void execute() {
-        frc.robot.Robot.driveTrain.driveWithJoysticks(Robot.oi.xBox.getX(), -Robot.oi.xBox.getY(), Robot.driveTrain.speed, Robot.driveTrain.flip);
+        frc.robot.Robot.driveTrain.driveWithJoysticks(Robot.oi.xBox.getX(), -Robot.oi.xBox.getY());
     }
 
     @Override

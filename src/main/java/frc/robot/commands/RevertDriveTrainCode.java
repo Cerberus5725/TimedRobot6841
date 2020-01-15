@@ -10,7 +10,7 @@ public class RevertDriveTrainCode extends Command {
 
     @Override
     protected void initialize() {
-        Robot.driveTrain.flip = false;
+        Robot.driveTrain.inverted = false;
     }
 
     @Override
